@@ -309,18 +309,162 @@ h1{
   padding-right:max(24px,calc((100vw - 1200px)/2 + 24px));
 }
 .section-dark .section-label{color:#aab6c2}
+.schedule-card{min-width:0}
+.schedule-intro{max-width:760px;margin-bottom:42px}
 .schedule-card .status{
   color:var(--accent-soft);
   text-transform:uppercase;
   letter-spacing:.14em;
   font-size:.72rem;
-  margin-bottom:18px;
+  margin:0 0 14px;
 }
 .schedule-card h2{
-  font-size:clamp(1.75rem,3vw,3rem);
-  white-space:nowrap;
+  font-size:clamp(1.9rem,3vw,3rem);
+  margin-bottom:16px;
 }
-.schedule-card p:last-child{color:#c8d0d9;max-width:650px}
+.schedule-intro > p:last-child{
+  margin:0;
+  color:#c8d0d9;
+  max-width:680px;
+}
+.week-switcher{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  max-width:720px;
+  margin:0 0 34px;
+  padding:5px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;
+  background:rgba(255,255,255,.045);
+  overflow:hidden;
+}
+.week-switcher-indicator{
+  position:absolute;
+  inset:5px auto 5px 5px;
+  width:calc((100% - 10px)/3);
+  border-radius:999px;
+  background:#eef3f8;
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+  transform:translateX(0);
+  transition:transform .42s cubic-bezier(.22,.8,.24,1);
+}
+.week-tab{
+  position:relative;
+  z-index:1;
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#aeb9c5;
+  padding:11px 14px 10px;
+  border-radius:999px;
+  cursor:pointer;
+  font:inherit;
+  text-align:center;
+  transition:color .3s ease;
+}
+.week-tab span{
+  display:block;
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.week-tab small{
+  display:block;
+  margin-top:1px;
+  font-size:.68rem;
+  letter-spacing:.04em;
+}
+.week-tab.is-active{color:#122033}
+.week-tab:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.schedule-viewport{overflow:hidden}
+.schedule-track{
+  display:flex;
+  width:100%;
+  transform:translateX(0);
+  transition:transform .52s cubic-bezier(.22,.8,.24,1);
+}
+.schedule-week{
+  flex:0 0 100%;
+  min-width:0;
+  padding-right:1px;
+}
+.schedule-week-heading{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:24px;
+  padding:0 0 14px;
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+.schedule-week-heading span{
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.7rem;
+  color:#aeb9c5;
+}
+.schedule-week-heading strong{
+  font-weight:400;
+  font-size:.95rem;
+  color:#edf2f7;
+}
+.schedule-days{border-bottom:1px solid rgba(255,255,255,.14)}
+.schedule-day{
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:30px;
+  padding:20px 0;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.schedule-day:first-child{border-top:0}
+.schedule-day-heading{padding-top:2px}
+.schedule-day-name{
+  display:block;
+  font-size:.95rem;
+  font-weight:500;
+  color:#fff;
+}
+.schedule-day-date{
+  display:block;
+  margin-top:2px;
+  font-size:.76rem;
+  color:#98a8b8;
+}
+.schedule-talks{
+  display:grid;
+  grid-template-columns:1fr;
+}
+.schedule-talk,
+.schedule-break{
+  display:grid;
+  grid-template-columns:130px 1fr;
+  gap:20px;
+  align-items:baseline;
+}
+.schedule-talk{
+  padding:8px 0;
+  color:#f4f6f8;
+}
+.schedule-talk time{
+  color:#cbd5df;
+  font-variant-numeric:tabular-nums;
+  font-size:.84rem;
+}
+.schedule-talk span{
+  font-size:.98rem;
+  letter-spacing:.01em;
+}
+.schedule-break{
+  padding:4px 0;
+  color:#73879a;
+  font-size:.72rem;
+}
+.schedule-break time{font-variant-numeric:tabular-nums}
+.schedule-break span{
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
 .venue-copy p{font-size:1.04rem}
 .venue-meta{
   display:grid;
@@ -405,6 +549,7 @@ footer{
   nav{gap:12px 18px}
   .hero{min-height:82vh;padding-top:80px}
   .section{grid-template-columns:1fr;gap:18px;padding:72px 20px}
+  .schedule-day{grid-template-columns:145px 1fr;gap:22px}
   #participants{padding-top:82px;padding-bottom:82px}
   #venue,.section-organizers{padding-top:82px;padding-bottom:82px}
   .venue-meta{grid-template-columns:1fr;gap:28px}
@@ -416,10 +561,34 @@ footer{
   .eyebrow{font-size:.72rem}
   .hero-pretitle{font-size:.84rem}
   .hero-details{font-size:1rem}
-  .schedule-card h2{
-    font-size:clamp(1.35rem,6.5vw,1.8rem);
-    white-space:nowrap;
+  .schedule-card h2{font-size:clamp(1.55rem,7vw,2rem)}
+  .week-switcher{margin-bottom:26px}
+  .week-tab{padding:10px 6px 9px}
+  .week-tab span{font-size:.72rem}
+  .week-tab small{font-size:.6rem}
+  .schedule-week-heading{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:2px;
   }
+  .schedule-day{
+    grid-template-columns:1fr;
+    gap:10px;
+    padding:18px 0;
+  }
+  .schedule-day-heading{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .schedule-day-date{margin-top:0}
+  .schedule-talk,
+  .schedule-break{
+    grid-template-columns:105px 1fr;
+    gap:14px;
+  }
+  .schedule-talk time{font-size:.8rem}
   .hero-details{display:block}
   .hero-details p + p{margin-top:8px}
   .participant-row{grid-template-columns:1fr auto;gap:14px}
