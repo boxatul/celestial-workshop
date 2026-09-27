@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Caslon+Display&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="schedule.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -70,9 +71,266 @@
     <section id="schedule" class="section section-dark">
       <div class="section-label">Schedule</div>
       <div class="section-body schedule-card">
-        <p class="status">Programme to be confirmed</p>
-        <h2>October 19 – November 6, 2026</h2>
-        <p>A detailed schedule will be posted here closer to the workshop.</p>
+        <div class="schedule-intro">
+          <p class="status">Programme to be confirmed</p>
+          <h2>Three weeks, one week at a time.</h2>
+          <p>Each weekday features three 30-minute talks, with 15-minute breaks between sessions.</p>
+        </div>
+
+        <div class="week-switcher" role="tablist" aria-label="Workshop week">
+          <span class="week-switcher-indicator" aria-hidden="true"></span>
+          <button class="week-tab is-active" type="button" role="tab" aria-selected="true" data-week="0">
+            <span>Week 1</span><small>Oct 19–23</small>
+          </button>
+          <button class="week-tab" type="button" role="tab" aria-selected="false" data-week="1">
+            <span>Week 2</span><small>Oct 26–30</small>
+          </button>
+          <button class="week-tab" type="button" role="tab" aria-selected="false" data-week="2">
+            <span>Week 3</span><small>Nov 2–6</small>
+          </button>
+        </div>
+
+        <div class="schedule-viewport">
+          <div class="schedule-track">
+
+          <article class="schedule-week is-active" data-week="0" aria-hidden="false">
+            <div class="schedule-week-heading">
+              <span>Week 1</span>
+              <strong>October 19–23, 2026</strong>
+            </div>
+            <div class="schedule-days">
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Monday</span>
+                  <span class="schedule-day-date">October 19</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Tuesday</span>
+                  <span class="schedule-day-date">October 20</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Wednesday</span>
+                  <span class="schedule-day-date">October 21</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Thursday</span>
+                  <span class="schedule-day-date">October 22</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Friday</span>
+                  <span class="schedule-day-date">October 23</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-week" data-week="1" aria-hidden="true">
+            <div class="schedule-week-heading">
+              <span>Week 2</span>
+              <strong>October 26–30, 2026</strong>
+            </div>
+            <div class="schedule-days">
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Monday</span>
+                  <span class="schedule-day-date">October 26</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Tuesday</span>
+                  <span class="schedule-day-date">October 27</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Wednesday</span>
+                  <span class="schedule-day-date">October 28</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Thursday</span>
+                  <span class="schedule-day-date">October 29</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Friday</span>
+                  <span class="schedule-day-date">October 30</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-week" data-week="2" aria-hidden="true">
+            <div class="schedule-week-heading">
+              <span>Week 3</span>
+              <strong>November 2–6, 2026</strong>
+            </div>
+            <div class="schedule-days">
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Monday</span>
+                  <span class="schedule-day-date">November 2</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Tuesday</span>
+                  <span class="schedule-day-date">November 3</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Wednesday</span>
+                  <span class="schedule-day-date">November 4</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Thursday</span>
+                  <span class="schedule-day-date">November 5</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+
+              <div class="schedule-day">
+                <div class="schedule-day-heading">
+                  <span class="schedule-day-name">Friday</span>
+                  <span class="schedule-day-date">November 6</span>
+                </div>
+                <div class="schedule-talks">
+                  <div class="schedule-talk"><time>9:30–10:00</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:00–10:15</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>10:15–10:45</time><span>TBC</span></div>
+                  <div class="schedule-break"><time>10:45–11:00</time><span>Break</span></div>
+                  <div class="schedule-talk"><time>11:00–11:30</time><span>TBC</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
       </div>
     </section>
 
