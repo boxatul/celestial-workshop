@@ -456,6 +456,8 @@ h1{
   font-size:.78rem;
   letter-spacing:.08em;
   font-variant-numeric:tabular-nums;
+  text-align:right;
+  justify-self:stretch;
 }
 .schedule-talk .schedule-title{
   font-size:.98rem;
