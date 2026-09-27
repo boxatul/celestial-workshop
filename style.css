@@ -156,7 +156,7 @@ nav a:hover{color:#fff}
 .eyebrow{
   text-transform:uppercase;
   letter-spacing:.23em;
-  font-size:.72rem;
+  font-size:.82rem;
   font-weight:600;
   color:#cbd8e6;
   margin:0 0 18px;
@@ -165,7 +165,7 @@ nav a:hover{color:#fff}
   margin:0 0 8px;
   text-transform:uppercase;
   letter-spacing:.14em;
-  font-size:.82rem;
+  font-size:.95rem;
   color:#f0d8dc;
 }
 h1,h2,h3{font-family:"Montserrat",Inter,sans-serif;font-weight:400}
@@ -184,7 +184,7 @@ h1{
   display:flex;
   gap:24px 60px;
   flex-wrap:wrap;
-  font-size:1.02rem;
+  font-size:1.12rem;
   color:#dde4ec;
 }
 .hero-details p{margin:0}
@@ -364,6 +364,9 @@ footer{
 }
 @media (max-width:520px){
   h1{font-size:clamp(3.5rem,19vw,5.7rem)}
+  .eyebrow{font-size:.72rem}
+  .hero-pretitle{font-size:.84rem}
+  .hero-details{font-size:1rem}
   .schedule-card h2{
     font-size:clamp(1.35rem,6.5vw,1.8rem);
     white-space:nowrap;
