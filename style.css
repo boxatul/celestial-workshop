@@ -438,7 +438,7 @@ h1{
 .schedule-talk,
 .schedule-break{
   display:grid;
-  grid-template-columns:130px 72px 1fr;
+  grid-template-columns:130px 1fr 72px;
   gap:20px;
   align-items:baseline;
 }
@@ -593,7 +593,7 @@ footer{
   .schedule-day-date{margin-top:0}
   .schedule-talk,
   .schedule-break{
-    grid-template-columns:100px 58px 1fr;
+    grid-template-columns:100px 1fr 58px;
     gap:10px;
   }
   .schedule-talk time{font-size:.8rem}
