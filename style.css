@@ -1,0 +1,189 @@
+:root{
+  --ink:#121316;
+  --paper:#f4f0e8;
+  --muted:#6d6a63;
+  --line:rgba(18,19,22,.14);
+  --accent:#a51c30;
+  --night:#14161d;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+.site-header{
+  position:fixed;
+  inset:0 0 auto 0;
+  z-index:20;
+  background:rgba(244,240,232,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-wrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+.site-mark{
+  font-family:"Libre Caslon Display",serif;
+  font-size:1.15rem;
+}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{font-size:.88rem;color:#3f403f}
+nav a:hover{color:var(--accent)}
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  padding:130px 24px 72px;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(165,28,48,.13), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(59,73,113,.13), transparent 32%),
+    linear-gradient(180deg,#f7f3ec 0%,#eee7dc 100%);
+}
+.hero-content{
+  width:min(1100px,100%);
+  position:relative;
+  z-index:2;
+}
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:.78rem;
+  font-weight:600;
+  color:var(--accent);
+  margin:0 0 24px;
+}
+h1,h2,h3{font-family:"Libre Caslon Display",serif;font-weight:400}
+h1{
+  font-size:clamp(4.6rem,12vw,10.2rem);
+  line-height:.82;
+  letter-spacing:-.045em;
+  margin:0;
+}
+.hero-details{
+  margin-top:42px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+  display:flex;
+  gap:24px 60px;
+  flex-wrap:wrap;
+  font-size:1.02rem;
+}
+.hero-details p{margin:0}
+.hero-orbit{
+  position:absolute;
+  border:1px solid rgba(18,19,22,.14);
+  border-radius:50%;
+  transform:rotate(-18deg);
+}
+.orbit-one{width:48vw;height:48vw;right:-9vw;top:15vh}
+.orbit-two{width:68vw;height:30vw;right:-18vw;top:34vh}
+.scroll-cue{
+  position:absolute;
+  bottom:26px;
+  right:32px;
+  font-size:1.8rem;
+}
+.section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:100px 24px;
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:48px;
+  border-top:1px solid var(--line);
+}
+.section-label{
+  text-transform:uppercase;
+  letter-spacing:.17em;
+  font-size:.75rem;
+  color:var(--muted);
+  padding-top:9px;
+}
+.section-body h2{
+  font-size:clamp(2.5rem,5vw,5rem);
+  line-height:1;
+  margin:0 0 30px;
+}
+.intro-copy p{
+  max-width:760px;
+  font-size:1.18rem;
+  color:#3d3e3e;
+}
+.speaker-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.speaker-grid span{
+  padding:17px 18px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  font-size:.98rem;
+}
+.section-dark{
+  max-width:none;
+  background:var(--night);
+  color:#f5f1e8;
+  padding-left:max(24px,calc((100vw - 1200px)/2 + 24px));
+  padding-right:max(24px,calc((100vw - 1200px)/2 + 24px));
+}
+.section-dark .section-label{color:#a9acb8}
+.schedule-card .status{
+  color:#d4a7ad;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:.78rem;
+  margin-bottom:18px;
+}
+.schedule-card p:last-child{color:#c8cad1;max-width:650px}
+.venue-copy p{font-size:1.14rem}
+.muted{color:var(--muted)}
+.organizer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+}
+.organizer-grid div{
+  border-top:1px solid var(--line);
+  padding-top:18px;
+}
+.organizer-grid h3{
+  margin:0;
+  font-size:1.8rem;
+}
+footer{
+  border-top:1px solid var(--line);
+  padding:28px 24px 42px;
+  color:var(--muted);
+  font-size:.85rem;
+  text-align:center;
+}
+@media (max-width:800px){
+  .site-header{position:static}
+  .nav-wrap{align-items:flex-start;flex-direction:column}
+  nav{gap:12px 18px}
+  .hero{min-height:82vh;padding-top:80px}
+  .section{grid-template-columns:1fr;gap:18px;padding:72px 20px}
+  .speaker-grid{grid-template-columns:1fr 1fr}
+  .organizer-grid{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .speaker-grid{grid-template-columns:1fr}
+  h1{font-size:clamp(3.6rem,20vw,6rem)}
+  .hero-details{display:block}
+  .hero-details p+ p{margin-top:8px}
+}
