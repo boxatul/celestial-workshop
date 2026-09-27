@@ -255,10 +255,14 @@ h1{
   font-size:.72rem;
   margin-bottom:18px;
 }
+.schedule-card h2{
+  font-size:clamp(1.75rem,3vw,3rem);
+  white-space:nowrap;
+}
 .schedule-card p:last-child{color:#c8d0d9;max-width:650px}
 .venue-copy p{font-size:1.14rem}
 .muted{color:var(--muted)}
-.section-organizers{background:var(--paper-2)}
+.section-organizers{background:transparent}
 .organizer-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -312,6 +316,10 @@ footer{
 }
 @media (max-width:520px){
   h1{font-size:clamp(3.5rem,19vw,5.7rem)}
+  .schedule-card h2{
+    font-size:clamp(1.35rem,6.5vw,1.8rem);
+    white-space:nowrap;
+  }
   .hero-details{display:block}
   .hero-details p + p{margin-top:8px}
   .participant-row{grid-template-columns:1fr auto;gap:14px}
