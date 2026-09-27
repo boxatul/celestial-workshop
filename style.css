@@ -438,7 +438,7 @@ h1{
 .schedule-talk,
 .schedule-break{
   display:grid;
-  grid-template-columns:130px 1fr;
+  grid-template-columns:130px 72px 1fr;
   gap:20px;
   align-items:baseline;
 }
@@ -451,7 +451,13 @@ h1{
   font-variant-numeric:tabular-nums;
   font-size:.84rem;
 }
-.schedule-talk span{
+.schedule-room{
+  color:#9fb0c1;
+  font-size:.78rem;
+  letter-spacing:.08em;
+  font-variant-numeric:tabular-nums;
+}
+.schedule-talk .schedule-title{
   font-size:.98rem;
   letter-spacing:.01em;
 }
@@ -585,8 +591,8 @@ footer{
   .schedule-day-date{margin-top:0}
   .schedule-talk,
   .schedule-break{
-    grid-template-columns:105px 1fr;
-    gap:14px;
+    grid-template-columns:100px 58px 1fr;
+    gap:10px;
   }
   .schedule-talk time{font-size:.8rem}
   .hero-details{display:block}
