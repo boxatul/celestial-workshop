@@ -156,38 +156,6 @@ h1{
   font-size:1.7rem;
   color:#e8edf3;
 }
-.affiliation-strip{
-  max-width:1240px;
-  margin:0 auto;
-  padding:26px 24px;
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:0;
-  background:var(--paper);
-  border-bottom:1px solid var(--line);
-}
-.affiliation-strip > *{
-  padding:3px 26px;
-  border-left:1px solid var(--line);
-}
-.affiliation-strip > *:first-child{
-  padding-left:0;
-  border-left:0;
-}
-.affiliation-label{
-  display:block;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-size:.6rem;
-  color:var(--muted);
-  margin-bottom:5px;
-}
-.affiliation-strip strong{
-  font-family:"Libre Caslon Display",serif;
-  font-size:1.12rem;
-  font-weight:400;
-}
-.affiliation-strip a:hover strong{color:var(--accent)}
 .section{
   max-width:1200px;
   margin:0 auto;
@@ -223,6 +191,20 @@ h1{
   color:#3d434a;
 }
 .intro-copy .section-kicker{font-size:.72rem}
+.collaboration-note{
+  margin-top:34px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  font-size:.82rem !important;
+  text-transform:uppercase;
+  letter-spacing:.09em;
+  color:var(--muted) !important;
+}
+.collaboration-note a{
+  margin-left:.28em;
+  color:var(--ink);
+}
+.collaboration-note a:hover{color:var(--accent)}
 .participant-table{
   width:100%;
   border-top:1px solid var(--line);
@@ -313,13 +295,6 @@ footer{
   .nav-wrap{align-items:flex-start;flex-direction:column}
   nav{gap:12px 18px}
   .hero{min-height:82vh;padding-top:80px}
-  .affiliation-strip{grid-template-columns:1fr}
-  .affiliation-strip > *{
-    border-left:0;
-    border-top:1px solid var(--line);
-    padding:15px 0;
-  }
-  .affiliation-strip > *:first-child{border-top:0}
   .section{grid-template-columns:1fr;gap:18px;padding:72px 20px}
   .organizer-grid{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
