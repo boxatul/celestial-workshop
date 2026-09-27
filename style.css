@@ -309,6 +309,13 @@ h1{
 }
 .schedule-card p:last-child{color:#c8d0d9;max-width:650px}
 .venue-copy p{font-size:1.14rem}
+.venue-contact{margin-top:28px}
+.venue-contact-label{
+  text-transform:uppercase;
+  letter-spacing:.17em;
+  font-size:.7rem;
+  color:var(--muted);
+}
 .muted{color:var(--muted)}
 .section-organizers{background:transparent}
 .organizer-grid{
