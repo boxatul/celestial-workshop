@@ -73,11 +73,12 @@ nav a:hover{color:#fff}
   padding:145px 24px 90px;
   color:#f8f4ec;
   background:
-    radial-gradient(ellipse at 76% 20%, rgba(144,183,220,.30), transparent 24%),
-    radial-gradient(ellipse at 58% 50%, rgba(72,112,154,.16), transparent 36%),
-    radial-gradient(ellipse at 18% 74%, rgba(165,28,48,.11), transparent 30%),
-    radial-gradient(ellipse at 38% 8%, rgba(111,137,177,.10), transparent 28%),
-    linear-gradient(145deg,#0d1826 0%,#13243a 48%,#1b3048 100%);
+    radial-gradient(ellipse at 83% 20%, rgba(144,183,220,.31), transparent 24%),
+    radial-gradient(ellipse at 68% 52%, rgba(72,112,154,.15), transparent 36%),
+    radial-gradient(ellipse at 18% 74%, rgba(165,28,48,.10), transparent 30%),
+    radial-gradient(ellipse at 40% 8%, rgba(111,137,177,.08), transparent 28%),
+    linear-gradient(90deg, rgba(5,13,23,.22) 0%, transparent 48%),
+    linear-gradient(145deg,#0b1623 0%,#13243a 48%,#1b3048 100%);
 }
 .hero::before{
   content:"";
@@ -85,8 +86,8 @@ nav a:hover{color:#fff}
   width:min(62vw,840px);
   aspect-ratio:1;
   border-radius:50%;
-  right:-13vw;
-  top:8vh;
+  right:-18vw;
+  top:7vh;
   opacity:.76;
   background:
     radial-gradient(circle at 37% 31%, rgba(255,255,255,.18) 0 1.1%, rgba(190,218,245,.10) 2.5%, transparent 7%),
@@ -262,19 +263,31 @@ h1{
   color:var(--accent);
   border-bottom-color:var(--accent);
 }
+#participants{
+  padding-top:110px;
+  padding-bottom:110px;
+  background:#f3f0e9;
+  box-shadow:0 0 0 100vmax #f3f0e9;
+  clip-path:inset(0 -100vmax);
+}
 .participant-table{
   width:100%;
-  border-top:1px solid var(--line);
+  border-top:1px solid rgba(18,24,32,.10);
 }
 .participant-row{
   display:grid;
   grid-template-columns:minmax(0,1fr) 190px;
   gap:24px;
-  padding:13px 0;
-  border-bottom:1px solid var(--line);
+  padding:15px 4px;
+  border-bottom:1px solid rgba(18,24,32,.09);
   align-items:baseline;
+  transition:background .18s ease;
 }
-.participant-row:hover{background:rgba(18,24,32,.025)}
+@media (hover:hover){
+  .participant-row:not(.participant-head):hover{
+    background:rgba(255,255,255,.38);
+  }
+}
 .participant-row > div:last-child{
   color:var(--muted);
   text-align:right;
@@ -308,16 +321,42 @@ h1{
   white-space:nowrap;
 }
 .schedule-card p:last-child{color:#c8d0d9;max-width:650px}
-.venue-copy p{font-size:1.14rem}
-.venue-contact{margin-top:28px}
-.venue-contact-label{
+.venue-copy p{font-size:1.04rem}
+.venue-meta{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:42px;
+  max-width:760px;
+  margin-top:38px;
+}
+.venue-block{
+  border-top:1px solid rgba(18,24,32,.12);
+  padding-top:15px;
+}
+.venue-block-label{
+  display:block;
+  margin-bottom:12px;
   text-transform:uppercase;
   letter-spacing:.17em;
   font-size:.7rem;
   color:var(--muted);
 }
+.venue-block p{margin:0}
+.venue-block a{
+  border-bottom:1px solid rgba(18,24,32,.24);
+  padding-bottom:1px;
+}
+.venue-block a:hover{
+  color:var(--accent);
+  border-bottom-color:var(--accent);
+}
 .muted{color:var(--muted)}
-.section-organizers{background:transparent}
+#venue{padding-top:112px;padding-bottom:112px}
+.section-organizers{
+  background:transparent;
+  padding-top:112px;
+  padding-bottom:112px;
+}
 .organizer-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -366,6 +405,9 @@ footer{
   nav{gap:12px 18px}
   .hero{min-height:82vh;padding-top:80px}
   .section{grid-template-columns:1fr;gap:18px;padding:72px 20px}
+  #participants{padding-top:82px;padding-bottom:82px}
+  #venue,.section-organizers{padding-top:82px;padding-bottom:82px}
+  .venue-meta{grid-template-columns:1fr;gap:28px}
   .organizer-grid{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr}
 }
