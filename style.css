@@ -52,8 +52,9 @@ a{color:inherit;text-decoration:none}
   margin-bottom:4px;
 }
 .mark-large{
-  font-family:"Libre Caslon Display",serif;
-  font-size:1.18rem;
+  font-family:"Montserrat",Inter,sans-serif;
+  font-weight:400;
+  font-size:1.02rem;
 }
 nav{display:flex;gap:22px;flex-wrap:wrap}
 nav a{
@@ -121,7 +122,7 @@ nav a:hover{color:#fff}
   font-size:.82rem;
   color:#f0d8dc;
 }
-h1,h2,h3{font-family:"Libre Caslon Display",serif;font-weight:400}
+h1,h2,h3{font-family:"Montserrat",Inter,sans-serif;font-weight:400}
 h1{
   font-family:"Montserrat",Inter,sans-serif;
   font-weight:300;
@@ -175,9 +176,11 @@ h1{
   padding-top:9px;
 }
 .section-body h2{
-  font-size:clamp(2.7rem,5vw,5.15rem);
-  line-height:.98;
-  margin:0 0 30px;
+  font-weight:300;
+  font-size:clamp(2rem,3.4vw,3.5rem);
+  line-height:1.05;
+  letter-spacing:-.025em;
+  margin:0 0 26px;
 }
 .section-kicker{
   margin:0 0 12px;
@@ -267,7 +270,8 @@ h1{
 }
 .organizer-grid h3{
   margin:0;
-  font-size:1.8rem;
+  font-weight:400;
+  font-size:1.35rem;
 }
 footer{
   background:#0c1724;
@@ -285,9 +289,10 @@ footer{
 }
 .footer-inner p{margin:0}
 .footer-title{
-  font-family:"Libre Caslon Display",serif;
+  font-family:"Montserrat",Inter,sans-serif;
+  font-weight:400;
   color:#fff;
-  font-size:1.28rem;
+  font-size:1.05rem;
 }
 .footer-inner a{
   text-transform:uppercase;
