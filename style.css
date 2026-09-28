@@ -438,7 +438,7 @@ h1{
 .schedule-talk,
 .schedule-break{
   display:grid;
-  grid-template-columns:130px 1fr 240px;
+  grid-template-columns:130px minmax(0,1fr) 240px;
   gap:20px;
   align-items:baseline;
 }
@@ -594,8 +594,12 @@ footer{
   .schedule-day-date{margin-top:0}
   .schedule-talk,
   .schedule-break{
-    grid-template-columns:100px 1fr 190px;
+    grid-template-columns:92px minmax(0,1fr) max-content;
     gap:10px;
+  }
+  .schedule-talk .schedule-title{
+    min-width:0;
+    overflow-wrap:break-word;
   }
   .schedule-talk time{font-size:.8rem}
   .hero-details{display:block}
